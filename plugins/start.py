@@ -200,31 +200,7 @@ async def not_joined(client: Client, message: Message):
         disable_web_page_preview = True
     )
 
-@Bot.on_message(filters.command("forceid") & filters.private)
-async def forceid_command(client, message: Message):
-    try:
-        # Extract the provided ID from the command
-        command_parts = message.text.split()
-        if len(command_parts) != 2:
-            await message.reply("Invalid command format. Use: /forceid {id}")
-            return
 
-        new_id = command_parts[1]
-
-        # Update the .env file with the new ID
-        with open(".env", "r") as file:
-            lines = file.readlines()
-
-        with open(".env", "w") as file:
-            for line in lines:
-                if line.startswith("FORCE_SUB_CHANNEL="):
-                    file.write(f"FORCE_SUB_CHANNEL={new_id}\n")
-                else:
-                    file.write(line)
-
-        await message.reply(f"forceid variable updated to {new_id}")
-    except Exception as e:
-        await message.reply(f"Error: {str(e)}")
 
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
