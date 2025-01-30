@@ -32,7 +32,7 @@ DB_URI = "mongodb+srv://Jamun:Jamun8080@jamun.a1rau.mongodb.net/?retryWrites=tru
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "inshorturl.com")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "c2208684d7ebad60b2b12a48dd9cbab82f4f33db")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "a767c3adced340cfb7f7f316f8141afc9f24a683")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","shortnertutorials69")
